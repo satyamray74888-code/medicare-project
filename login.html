@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patient Login | MediCare+</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-chat="1" data-role="patient">
+<header class="top"><div class="wrap"><a class="logo" href="index.html">MediCare+</a><nav id="nav" aria-label="Main"></nav></div></header>
+<main class="auth"><div class="panel">
+ <h1 style="font-size:1.9rem">Patient login</h1>
+ <div class="tabs"><button class="on" data-m="in" type="button">Log in</button><button data-m="up" type="button">Create account</button></div>
+ <form id="lf" novalidate>
+  <div class="f" id="nmf" hidden><label for="nm">Full name</label><input id="nm" name="nm" autocomplete="name"></div>
+  <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com"></div>
+  <div class="f"><label for="pw">Password</label><input id="pw" name="pw" type="password" autocomplete="current-password"></div>
+  <p class="err" id="err" role="alert"></p>
+  <button class="btn" id="go" style="width:100%">Log in</button>
+ </form>
+ <p class="hint"><b>Demo patient:</b> patient@demo.com / demo123</p>
+<p style="margin-top:14px;text-align:center">Are you a doctor? <a href="doctor-login.html">Go to Doctor Login</a></p>
+</div></main>
+<footer>College mini project. Demo data only; not a substitute for a doctor.</footer>
+<script src="app.js"></script><script src="chatbot.js"></script></body></html>

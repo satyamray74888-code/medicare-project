@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doctor Login | MediCare+</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-role="doctor">
+<header class="top"><div class="wrap"><a class="logo" href="index.html">MediCare+</a><nav id="nav" aria-label="Main"></nav></div></header>
+<main class="auth"><div class="panel">
+ <span class="tag green">For doctors</span>
+ <h1 style="font-size:1.9rem">Doctor login</h1>
+ <p style="color:var(--soft)">Sign in to view patient histories and add notes or prescriptions.</p>
+ <form id="lf" novalidate>
+  <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="doctor@hospital.com"></div>
+  <div class="f"><label for="pw">Password</label><input id="pw" name="pw" type="password" autocomplete="current-password"></div>
+  <p class="err" id="err" role="alert"></p>
+  <button class="btn" id="go" style="width:100%">Log in as doctor</button>
+ </form>
+ <p class="hint"><b>Demo doctors:</b> all use the password <b>doctor123</b>. Tap a doctor below to fill the form.<br><small>Doctor accounts are created by the hospital admin, so there is no sign-up here.</small></p>
+ <div id="dl" class="dl"></div>
+ <p style="margin-top:14px;text-align:center">Are you a patient? <a href="login.html">Go to Patient Login</a></p>
+</div></main>
+<footer>College mini project. Demo data only.</footer>
+<script src="app.js"></script></body></html>

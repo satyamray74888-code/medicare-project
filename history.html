@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>History | MediCare+</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-private="1" data-chat="1">
+<header class="top"><div class="wrap"><a class="logo" href="index.html">MediCare+</a><nav id="nav" aria-label="Main"></nav></div></header>
+<main class="page"><div class="wrap">
+ <div class="head"><h1 style="font-size:2rem">Medical history</h1><p>Click an entry to see details.</p></div>
+ <details class="card addbox"><summary>+ Add a record</summary>
+ <form id="af" novalidate class="af">
+  <div class="f"><label for="type">Type</label><select id="type" name="type"><option value="visit">Doctor visit</option><option value="test">Test or report</option><option value="medicine">Medicine</option><option value="condition">Condition</option><option value="allergy">Allergy</option><option value="symptom">Symptom</option></select></div>
+  <div class="f"><label for="title">Title</label><input id="title" name="title" placeholder="e.g. Blood test, Paracetamol 500 mg" maxlength="80"></div>
+  <div class="f"><label for="date">Date</label><input id="date" name="date" type="date"></div>
+  <div class="f"><label for="note">Notes (optional)</label><input id="note" name="note" placeholder="Result, dose, doctor's advice..." maxlength="200"></div>
+  <p class="err" id="aerr" role="alert"></p><button class="btn">Save record</button> <span id="ok" style="color:var(--green);font-weight:700" role="status"></span>
+ </form></details>
+ <div class="bar"><input id="q" type="search" placeholder="Search your history" aria-label="Search">
+  <select id="f" aria-label="Filter"><option value="all">All records</option><option value="visit">Visits</option><option value="test">Tests</option><option value="medicine">Medicines</option><option value="condition">Conditions</option><option value="allergy">Allergies</option><option value="symptom">Symptoms (chatbot)</option><option value="note">Doctor notes</option></select></div>
+ <ul class="tl" id="tl"></ul><p id="none" hidden style="text-align:center;color:var(--soft)">No records match. Try another word or choose All records.</p>
+</div></main>
+<footer>College mini project. Demo data only; not a substitute for a doctor.</footer>
+<script src="app.js"></script><script src="chatbot.js"></script></body></html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | MediCare+</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-private="1" data-chat="1">
+<header class="top"><div class="wrap"><a class="logo" href="index.html">MediCare+</a><nav id="nav" aria-label="Main"></nav></div></header>
+<main class="page"><div class="wrap">
+ <div class="head"><h1 id="hi" style="font-size:2rem"></h1><p>Your care summary, built from your history.</p></div>
+ <div class="grid">
+  <section class="card"><h2>Your profile</h2><div id="prof"></div><div class="big" id="vit" style="margin-top:10px"></div></section>
+  <section class="card"><h2>Today's medicines</h2><ul class="list" id="meds"></ul></section>
+  <section class="card rec"><h2>Recommended for you</h2><ul class="list" id="rec"></ul></section>
+  <section class="card"><h2>Blood sugar, last 6 weeks</h2><svg id="chart" viewBox="0 0 400 150" role="img" aria-label="Blood sugar trend"></svg>
+  <form id="sl" style="display:flex;gap:8px;margin-top:10px" novalidate><input name="val" type="number" placeholder="Log today's sugar (mg/dL)" aria-label="Blood sugar reading" style="flex:1;font:inherit;padding:9px 12px;border:2px solid var(--line);border-radius:10px"><button class="btn sm">Save</button></form><p class="err" id="slerr" role="alert"></p></section>
+ </div></div></main>
+<footer>College mini project. Demo data only; not a substitute for a doctor.</footer>
+<script src="app.js"></script><script src="chatbot.js"></script></body></html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doctor Portal | MediCare+</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-private="doctor">
+<header class="top"><div class="wrap"><a class="logo" href="index.html">MediCare+</a><nav id="nav" aria-label="Main"></nav></div></header>
+<main class="page"><div class="wrap">
+ <div class="head"><h1 id="dh" style="font-size:2rem">Doctor portal</h1><p>View patient histories and add your notes. Whatever you add appears in that patient's History.</p></div>
+ <div class="big" id="dstats" style="margin-bottom:20px"></div>
+ <div class="split">
+  <aside class="card"><h2>Patients</h2>
+   <input id="ps" type="search" placeholder="Search patients" aria-label="Search patients" class="sbox">
+   <ul class="list plist" id="plist"></ul></aside>
+  <section>
+   <div class="card" id="pempty">Select a patient from the list to see their history.</div>
+   <div id="pbody" hidden>
+    <div class="card"><h2 id="pname"></h2><p id="pmail" style="color:var(--soft);margin-bottom:10px"></p><div id="pprof"></div><div class="big" id="pvit" style="margin-top:10px"></div></div>
+    <div class="card" style="margin-top:20px"><h2>Add doctor's note or prescription</h2>
+     <form id="df" novalidate>
+      <div class="f"><label for="type">Type</label><select id="type" name="type"><option value="note">Doctor's note</option><option value="medicine">Prescription (medicine)</option><option value="test">Test advised or result</option><option value="visit">Visit summary</option><option value="condition">Diagnosis (condition)</option><option value="allergy">Allergy</option></select></div>
+      <div class="f"><label for="title">Title</label><input id="title" name="title" maxlength="80" placeholder="e.g. Metformin 500 mg, Follow-up advice"></div>
+      <div class="f"><label for="date">Date</label><input id="date" name="date" type="date"></div>
+      <div class="f"><label for="note">Details</label><input id="note" name="note" maxlength="250" placeholder="Dose, advice, next visit..."></div>
+      <p class="err" id="derr" role="alert"></p><button class="btn">Save to patient history</button> <span id="dok" style="color:var(--green);font-weight:700" role="status"></span>
+     </form></div>
+    <div style="margin-top:20px"><h2>History</h2><ul class="tl" id="ptl"></ul></div>
+   </div>
+  </section>
+ </div>
+</div></main>
+<footer>College mini project. Demo data only; not a substitute for a doctor.</footer>
+<script src="app.js"></script></body></html>
